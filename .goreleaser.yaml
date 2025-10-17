@@ -53,7 +53,7 @@ release:
   draft: false
   github:
     owner: datagriff        
-    name: learn-go-cli-cobra           
+    name: datagriff-datacli           
 
 changelog:
   sort: asc

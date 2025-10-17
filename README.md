@@ -1,4 +1,4 @@
-# learn-go-cli-cobra
+# datagriff-datacli
 
 1. mkdir datacli
 2. go mod init github.com/datagriff/datacli
@@ -6,12 +6,20 @@
 4. cobra-cli init
 5. goreleaser init
 
+## MacOS / Linux Installation
+
+### Homebrew (Recommended)
+
+```bash
+brew install dataGriff/tap/datagriff-datacli
+```
+
 ## Windows Installation
 
 ### Quick Install (Recommended)
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/dataGriff/learn-go-cli-cobra/main/install/windows.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/dataGriff/datagriff-datacli/main/install/windows.ps1 | iex
 ```
 
 ### Manual Download
