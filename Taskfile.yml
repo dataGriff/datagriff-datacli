@@ -12,6 +12,19 @@ tasks:
       - echo "{{.GREETING}}"
     silent: true
 
+  setup:go:
+    desc: Setup pre-requisites
+    cmds: 
+      - go install github.com/spf13/cobra-cli@latest
+      - go install github.com/goreleaser/goreleaser/v2@latest
+    silent: true
+
+  setup:
+    desc: Setup pre-requisites
+    deps:
+      - setup:go 
+    silent: true
+
   test:
     desc: Test learn go cobra cli
     dir: datacli
