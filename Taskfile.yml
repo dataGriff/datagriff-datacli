@@ -1,0 +1,20 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Welcome to the learn-go-cobra-cli!
+
+tasks:
+  default:
+    desc: Welcome message
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+
+  test:
+    desc: Test learn go cobra cli
+    dir: datacli
+    cmds:
+      - go test ./...
+    silent: true
