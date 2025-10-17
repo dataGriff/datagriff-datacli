@@ -31,3 +31,23 @@ tasks:
     cmds:
       - go test ./...
     silent: true
+
+  versions:
+    desc: Versions of installations
+    cmds:
+      - goreleaser --version
+
+  build:
+    desc: Perform a build
+    cmds:
+      - goreleaser build --snapshot --clean
+
+  release:dry:
+    desc: Run a dry run release
+    cmds:
+      - goreleaser release --snapshot --clean
+
+  install:system:
+    desc: Install the CLI system wide
+    cmds:
+      - sudo cp ./dist/datagriff_linux_amd64_v1/datagriff-datacli /usr/local/bin/

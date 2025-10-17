@@ -1,0 +1,48 @@
+version: 2
+
+project_name: datagriff-datacli
+
+before:
+  hooks:
+    - sh -c "cd datacli && go mod tidy"
+
+builds:
+  - id: datagriff
+    main: .
+    binary: datagriff-datacli
+    dir: datacli
+    env:
+      - CGO_ENABLED=0
+    flags: [ -trimpath ]
+    ldflags: [ -s -w ]
+    goos: [ linux, darwin, windows ]
+    goarch: [ amd64, arm64 ]
+
+archives:
+  - id: default
+    builds: [ datagriff ]
+    name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - LICENSE*
+      - README*
+
+checksum:
+  name_template: "SHA256SUMS.txt"
+  algorithm: sha256
+
+release:
+  draft: false
+  github:
+    owner: datagriff        
+    name: learn-go-cli-cobra           
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^chore:'
+      - '^test:'

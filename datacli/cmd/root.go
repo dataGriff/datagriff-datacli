@@ -16,7 +16,7 @@ var (dataPath string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "datacli",
+	Use:   "datagriff-datacli",
 	Short: "A zero-dependency JSON-driven CLI",
 	Long: `datacli is a small demo CLI using Cobra. 
 	It loads a JSON catalog (embedded by default) or from -data <file>.
