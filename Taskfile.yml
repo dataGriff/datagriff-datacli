@@ -47,6 +47,12 @@ tasks:
     cmds:
       - goreleaser release --snapshot --clean
 
+  # release:
+  #   desc: Tag and release
+  #   cmds:
+  #     - git tag v0.1.0
+  #     - git push origin v0.1.0
+
   install:system:
     desc: Install the CLI system wide
     cmds:
