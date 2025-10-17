@@ -11,4 +11,11 @@ type Catalog struct {
 	Products []Product `json:"products"`
 }
 
-
+func (c *Catalog) FindByID(id string) *Product {
+	for _, p := range c.Products {
+		if p.ID == id {
+			return &p
+		}
+	}
+	return nil
+}

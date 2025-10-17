@@ -18,7 +18,7 @@ var embeddedFS embed.FS
 func Load(path string) (Catalog, error){
 	var r io.ReadCloser
 	if path == "" {
-		f, err := embeddedFS.Open("default.json")
+		f, err := embeddedFS.Open("assets/default.json")
 		if err != nil {
 			return Catalog{}, fmt.Errorf("open embedded data: %w", err)
 		}
