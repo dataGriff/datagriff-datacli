@@ -1,0 +1,7 @@
+{
+  "products": [
+    { "id": "p1", "name": "Keyboard", "price": 49.99, "tags": ["peripherals"] },
+    { "id": "p2", "name": "Mouse", "price": 29.50, "tags": ["peripherals"] },
+    { "id": "p3", "name": "Monitor", "price": 199.00, "tags": ["display"] }
+  ]
+}
