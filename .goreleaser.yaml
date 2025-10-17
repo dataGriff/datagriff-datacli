@@ -29,6 +29,22 @@ archives:
       - LICENSE*
       - README*
 
+brews:
+  - name: datagriff-datacli
+    repository:
+      owner: datagriff         # your GitHub user/org
+      name: homebrew-tap
+    commit_author:
+      name: GoReleaser
+      email: noreply@goreleaser.com
+    directory: Formula
+    description: "A zero-dependency JSON-driven CLI"
+    homepage: "https://github.com/datagriff/datagriff-datacli"
+    install: |
+      bin.install "datagriff-datacli"
+    test: |
+      system "#{bin}/datagriff-datacli", "--version"
+
 checksum:
   name_template: "SHA256SUMS.txt"
   algorithm: sha256

@@ -10,7 +10,7 @@ param(
 
 # Configuration
 $RepoOwner = "dataGriff"
-$RepoName = "learn-go-cli-cobra"
+$RepoName = "datagriff-datacli"
 $BinaryName = "datagriff-datacli"
 
 # Determine architecture
